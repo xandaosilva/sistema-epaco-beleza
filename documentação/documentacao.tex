@@ -1,0 +1,52 @@
+\documentclass{article}
+
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage[a4paper, left=1cm, right=2cm, top=2cm, bottom=3cm]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\usepackage{multirow}
+
+\begin{document}
+	\title{\textbf{{\Huge Sistema Espaço Beleza e Cia Express}}}
+	\author{Alexandre Rogério, Elizangela Silva e Manoel Maciel}
+	\maketitle
+	\thispagestyle{empty}
+	\newpage
+	
+	\setcounter{page}{1}
+	\pagenumbering{Roman}
+	\tableofcontents
+	\newpage
+	
+	\listoffigures
+	\newpage
+	
+	\listoftables
+	\newpage
+	
+	\setcounter{page}{1}
+	\pagenumbering{arabic}
+	
+	\section{Introdução}
+	\input{intro.tex}
+	\newpage
+	\section{Desenvolvimento}
+	\input{dev.tex}
+	\newpage
+	\section{Casos de uso}
+	\input{diagramas.tex}
+	\newpage
+	\section{Detalhamentos de caso de uso}
+	\input{detalhamento.tex}
+	\newpage
+	\section{Protótipos de telas}
+	\input{prototipos.tex}
+	\newpage
+	\section{Conclusão}
+	\input{conclusao.tex}
+\end{document}

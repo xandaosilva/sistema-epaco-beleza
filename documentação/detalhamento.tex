@@ -1,0 +1,149 @@
+\subsection{Atores do sistema}
+Os atores do sistema serão o usuário, o cliente e o administrador.
+\subsection{Login}
+\begin{enumerate}
+	\item Pré condições
+		\begin{enumerate}
+			\item O usuário deverá estar previamente cadastrado no sistema.
+			\item O usuário deverá ter permissão de administrador para autenticar no sistema.
+		\end{enumerate}
+	\item Pós condições
+		\begin{enumerate}
+			\item O login deverá permanecer ativo até o logout do usuário.
+			\item Todas as informações deverão persistir no sistema.
+		\end{enumerate}
+	\item Fluxo principal
+		\begin{enumerate}
+			\item O usuário deseja autenticar no sistema.
+			\item O sistema solicita o email e a senha.
+			\item O Usuário informa os dados.
+			\item O sistema valida os dados.
+			\item O usuário é autenticado no sistema.
+			\item O caso de uso se encerra.
+		\end{enumerate}
+	\item Fluxo alternativo
+		\begin{enumerate}
+			\item Caso a autenticação não aconteça.
+				\begin{enumerate}
+					\item O sistema informa o erro para o usuário.
+					\item O sistema retorna ao item b. do fluxo principal.
+				\end{enumerate}		
+		\end{enumerate}
+\end{enumerate}
+
+\subsection{Cadastrar}
+\begin{enumerate}
+	\item Pré condições
+	\begin{enumerate}
+		\item O caso de uso Login deverá ter sido executado.
+	\end{enumerate}
+	\item Pós condições
+	\begin{enumerate}
+		\item Todas as informações deverão persistir no sistema.
+	\end{enumerate}
+	\item Fluxo principal
+	\begin{enumerate}
+		\item O usuário deseja realizar um novo cadastro no sistema.
+		\item O sistema solicita as informações necessárias referentes a cada entidade do sistema.
+		\item O Usuário informa os dados.
+		\item O sistema valida os dados.
+		\item O cadastro é realizado com sucesso.
+		\item O sistema salva os dados.
+		\item O sistema informa o sucesso do cadastro para o usuário;
+		\item O caso de uso se encerra.
+	\end{enumerate}
+	\item Fluxo alternativo
+	\begin{enumerate}
+		\item Caso o cadastro não aconteça.
+		\begin{enumerate}
+			\item O sistema informa o erro para o usuário.
+			\item O sistema retorna ao item b. do fluxo principal.
+		\end{enumerate}
+		\item Caso haja inconsistência dos dados.
+		\begin{enumerate}
+			\item O sistema informa o(s) campo(s) inválido(s) para o usuário.
+			\item O sistema retorna ao item b. do fluxo principal.
+		\end{enumerate}		
+	\end{enumerate}
+\end{enumerate}
+
+\subsection{Alterar}
+\begin{enumerate}
+	\item Pré condições
+	\begin{enumerate}
+		\item O caso de uso Login deverá ter sido executado.
+	\end{enumerate}
+	\item Pós condições
+	\begin{enumerate}
+		\item Todas as informações deverão persistir no sistema.
+	\end{enumerate}
+	\item Fluxo principal
+	\begin{enumerate}
+		\item O usuário deseja realizar alguma alteração no sistema.
+		\item O caso de uso listar é realizado.
+		\item O usuário informa o que será alterado.
+		\item Todo o processo a partir do item c. do caso de uso cadastrar é realizado.
+		\item O caso de uso se encerra.
+	\end{enumerate}
+	\item Fluxo alternativo
+	\begin{enumerate}
+		\item Caso o cadastro não aconteça.
+		\begin{enumerate}
+			\item O sistema informa o erro para o usuário.
+			\item O sistema retorna ao item b. do fluxo principal.
+		\end{enumerate}
+		\item Caso haja inconsistência dos dados.
+		\begin{enumerate}
+			\item O sistema informa o(s) campo(s) inválido(s) para o usuário.
+			\item O sistema retorna ao item b. do fluxo principal.
+		\end{enumerate}		
+	\end{enumerate}
+\end{enumerate}
+
+\subsection{Listar}
+\begin{enumerate}
+	\item Pré condições
+	\begin{enumerate}
+		\item O caso de uso login deverá ter sido executado.
+	\end{enumerate}
+	\item Pós condições
+	\begin{enumerate}
+		\item Todas as informações deverão persistir no sistema.
+	\end{enumerate}
+	\item Fluxo principal
+	\begin{enumerate}
+		\item O usuário deseja visualizar as informações do sistema.
+		\item O sistema retorna os dados para o usuário.
+		\item O caso de uso se encerra.
+	\end{enumerate}
+	\item Fluxo alternativo
+	\begin{enumerate}
+		\item Caso a listagem não aconteça.
+		\begin{enumerate}
+			\item O sistema informa o erro para o usuário.
+			\item O sistema retorna ao item a. do fluxo principal.
+		\end{enumerate}
+		\item Caso o usuário deseje filtrar a listagem.
+		\begin{enumerate}
+			\item O sistema solicita os dados para o usuário.
+			\item O usuário informa os parâmetros para a busca.
+			\item O sistema retorna os resultados da busca de maneira dinâmica para o usuário.
+			\item O sistema retorna ao item a. do fluxo principal.
+		\end{enumerate}
+		\item Caso o sistema não encontre a informação desejada.
+		\begin{enumerate}
+			\item O sistema informa que não houve resultados para a busca informada para o usuário.
+			\item O sistema retorna ao item a. do fluxo principal.
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
+\subsection{Dados}
+\begin{itemize}
+	\item Nome, cpf, e-mail, senha, códigos, valores, datas e números de telefones.
+	\item E-mail deverá ser único por usuário.
+	\item Cpf deverá ser único por usuário e deverá conter a seguinte formatação (xxx.xxx.xxx-xx).
+	\item Telefone deverá ser único por usuário, mas o usuário poderá ter mais de um telefone cadastrado no sistema. 
+	\item Telefone deverá conter a seguinte formatação ((xx)xxxxx-xxxx).
+	\item Datas dos agendamentos deverão conter a data e o horário e com as seguintes formatações (aaaa-mm-dd e hh:mm).
+	\item Valores monetários deverão conter a seguinte formatação R\$xx.xx.
+\end{itemize}
