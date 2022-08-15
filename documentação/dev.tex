@@ -1,10 +1,29 @@
 \subsection{Análise de requisitos}
 \subsubsection{Requisitos funcionais}
-Os requisitos funcionais do sistema desenvolvido serão o gerenciamento de administradores, clientes, produtos, serviços e agendamentos.
-Todos os cálculos deverão ser realizados de forma automatizada.
-As informações poderão ser detalhadas e selecionadas de acordo com os administradores e deverão ser exibidas de acordo com o perfil de usuário, por exemplo, informações de cadastro de cada cliente poderão ser acessadas apenas pelos administradores do sistema.
+Os requisitos funcionais do sistema desenvolvido serão: 
+
+\begin{itemize}
+	\item O cadastro de administradores, clientes, produtos, serviços e agendamentos;
+	\item A alteração de administradores, clientes, produtos, serviços e agendamentos;
+	\item A listagem de administradores, clientes, produtos, serviços e agendamentos;
+	\item A listagem de produtos e serviços para acesso público;
+	\item Autenticação;
+	\item Cálculos monetários;
+	\item Efetuação de pagamentos de serviços agendados e concluídos;
+\end{itemize}
+
 \subsubsection{Requisitos não funcionais}
-Os requisitos não funcionais do sistema serão o seu desenvolvimento no padrão de projeto MVC, persistência a dados com sgbd e a parte visual será desenvolvida no modo de aplicação de página única e com responsividade ( desenvolvimento mobile first ).
+Os requisitos não funcionais do sistema serão:
+
+\begin{itemize}
+	\item desenvolvimento no padrão MVC;
+	\item persistência a dados;
+	\item o front-end será no modelo de aplicação de página única;
+	\item o front-end será desenvolvido no modelo mobile first;
+	\item o projeto será homologado nas resoluções de 576px, 768px e 1200px;
+	\item implantações do servidor e do front-end em serviços diferentes;
+\end{itemize}
+
 \subsection{Tecnologias adotadas}
 \subsubsection{Modelagem}
 \begin{itemize}
@@ -12,14 +31,14 @@ Os requisitos não funcionais do sistema serão o seu desenvolvimento no padrão
 \end{itemize}
 \subsubsection{Backend}
 \begin{itemize}
-	\item Springboot ferramenta adotada para o desenvolvimento do backend.
-	\item Java será a linguagem de programação utilizada no servidor e nos controladores.
-	\item Postgres sistema de gerenciamento de banco de dados.
-	\item Postman software terá por finalidade testar as requisições http do sistema.
+	\item Springboot ferramenta para o desenvolvimento do servidor.
+	\item Java linguagem de programação utilizada no servidor.
+	\item PostgreSQL sistema de gerenciamento de banco de dados.
+	\item Postman software em que as requisições do sistema serão testadas.
 \end{itemize}
 \subsubsection{Frontend}
 \begin{itemize}
-	\item React frmaework javascript que ficará responsável pela parte visual e do gerenciamento de rotas do sistema.
+	\item React framework javascript que ficará responsável pela parte visual do sistema.
 	\item SASS tecnologia para o desenvolvimento de estilos personalizados.
 	\item Bootstrap framework CSS.
 \end{itemize}
@@ -30,8 +49,8 @@ Os requisitos não funcionais do sistema serão o seu desenvolvimento no padrão
 \end{itemize}
 \subsubsection{Domínio e hospedagem}
 \begin{itemize}
-	\item Heroku
-	\item Netlify
+	\item Heroku encarregado em hospedar o servidor.
+	\item Netlify ou vercel responsáveis em hospedar a parte visual.
 	\item Domínio ficará a critério do administrador do sistema.
 \end{itemize}
 

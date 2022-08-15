@@ -1,0 +1,24 @@
+Cliente 
+Nome;
+email;
+telefone;
+
+Serviço
+Nome;
+Cliente;
+tempo estimado;
+Valor;
+
+Agendamento
+Cliente;
+Serviço;
+Data;
+valor total;
+
+
+
+
+
+
+
+
